@@ -340,7 +340,7 @@ Technical interviews for developer internships often have you write
 some code. They usually test first-year and second-year material, and many students
 practice these kinds of problems regularly over the academic year to gain confidence in tackling them.
 
-As part of this week's lab, you'll solve two of them, and submit your code
+As part of this week's lab, you'll solve one of them, and submit your code
 on MarkUs to get practice with running the self tests on MarkUs.
 
 ## Task 4: Multiples of 3 and 5
