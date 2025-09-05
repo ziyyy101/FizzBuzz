@@ -6,18 +6,18 @@ But first, let's get you your own copy of this codebase to work with.
 ## Task 0 Forking a public repository on GitHub
 
 You should be currently reading this README on GitHub in the code repository:
-https://github.com/CSC207-2025F-UofT/lab1.FizzBuzz/
+https://github.com/CSC207-2025F-UofT/FizzBuzz/
 
 1. Make sure you are logged into GitHub. You should see a button that says `Fork` in the top-right corner of the page.
 Click this button to create a fork of this repository, which will be your own copy of the codebase to edit as you please.
-In the new page that comes up, confirm that you want to create the fork and your own lab1.FizzBuzz repository will be created
+In the new page that comes up, confirm that you want to create the fork and your own FizzBuzz repository will be created
 on GitHub!
 
 2. Now that you have your own fork of this repository, close this page, go to your fork, and continue with the next instructions.
 
-3. The next step is to get a local copy of your lab1.FizzBuzz repository on your own computer.
+3. The next step is to get a local copy of your FizzBuzz repository on your own computer.
 This is called **cloning** the repository.
-You can do this by clicking the green `Code` button in your lab1.FizzBuzz repository on GitHub and copying
+You can do this by clicking the green `Code` button in your FizzBuzz repository on GitHub and copying
 the HTTPS URL which you will see. You can copy it by clicking the little 'copy' button with the two rectangles on it.
 
 4. Open IntelliJ. If you already have a project open, close that project. From the main screen, choose
@@ -33,11 +33,11 @@ or you can choose the directory.
 access token to be able to clone the repository from GitHub if you didn't previously do so in the
 software setup instructions on Quercus.
 
-* Now that you have a copy of the code on your computer, you can proceed to work through the rest of the activity
+Now that you have a copy of the code on your computer, you can proceed to work through the rest of the activity
 in IntelliJ. Open this `README.md` file in IntelliJ and in the top-right you can toggle between seeing the editor,
 editor+preview, or just the preview of this markdown file.
-* 
-Feel free to take notes in it as you go or just read the preview view of it.
+
+> Feel free to take notes in it as you go or just read the preview view of it.
 
 Before we begin, note that IntelliJ is made by the same company as PyCharm, so it should feel quite familiar to you,
 with the only difference being that we'll be working with Java code instead of Python code of course!
@@ -60,7 +60,7 @@ And now, back to Fizz Buzz!
 Fizz Buzz is a game where people sit in a circle. Counting from 1 and going around the circle,
 people say one of four things for a number `i`: `Fizz`, `Buzz`, `Fizz Buzz`, or `i`.
 
-Formally as a coding task, let `i` be a positive integer and output the following:
+Formally as a coding task, let `i` be an integer greater than zero and output the following:
 
 * If `i` is divisible by 3, print the string `Fizz`
 * If `i` is divisible by 5, print the string `Buzz`
@@ -91,9 +91,9 @@ Let's explore a solution written in Java.
 
 ```java
 /**
- * Solve the lab1.FizzBuzz challenge.
+ * Solve the FizzBuzz challenge.
  */
-class lab1.FizzBuzz {
+class FizzBuzz {
 
     public static void main(String[] args) {
 
@@ -126,14 +126,16 @@ class lab1.FizzBuzz {
 }
 ```
 
-- [ ] Open `lab1.FizzBuzz.java` in the `src` directory and click the run button in the top left corner.
+- [ ] Open `FizzBuzz.java` in the `src` directory and click the run button in the top left corner.
 
 If you don't see this button, you may need to mark `src` as the `Sources Root` for the project. You can do this
 by right-clicking the `src` directory in the `Project` tab and near the bottom of the context menu
 you will see `Mark Directory as`. Hover that and then select `Sources Root`. Then run the file.
 The program may take a second to compile and run, but then you should see that it prints out the first 100 outputs of
-this Fizz Buzz problem. Note: you may also need to set your project SDK before you can run your code. There will
-be a warning message in IntelliJ if this is the case, and you can click the message to set up the SDK.
+this Fizz Buzz problem.
+
+>Note: you may also need to set your project SDK before you can run your code. There will
+>be a warning message in IntelliJ if this is the case, and you can click the message to set up the SDK.
 
 You may never have seen Java before, but we bet you can puzzle out how it works.
 
@@ -145,11 +147,12 @@ on with that weird `for` loop? As you do this, you might find it useful to write
 own implementation in Python to help you begin to create a mapping between the two languages.
 
 - [ ] Make note of any specific Java syntax which stands out to you and compare what you
-come up with those around you. Try to come up with a list of at least five things that
+come up with the rest of your team. Try to come up with a list of at least five things that
 strike you as either similar to or different from Python.
 
-Tip: IntelliJ works just like PyCharm, so you can place breakpoints and step through the code using the debugger in the same way.
-You might find it informative to try stepping through the code to see what it is doing on a few iterations.
+> Tip: IntelliJ works just like PyCharm, so you can place breakpoints and step through the code
+> using the debugger in the same way. You might find it informative to try stepping through the
+> code to see what it is doing on a few iterations.
 
 ## The Main Function
 
@@ -165,8 +168,6 @@ This is the main method, the entry point of your program. You have installed Jav
 and it is, loosely speaking, a program that knows how to compile and run your program — it calls
 method `main` in the file you choose to run.
 
-For now, it is enough to know that the main method gets run.
-
 ### Task 1.1: Rewrite this using `while`
 
 - [ ] You've puzzled through how Java `for` and `if` statements work; now rewrite this
@@ -181,8 +182,7 @@ test the calculation for several interesting numbers more easily.
 
 ## Task 2: How to refactor this code using IntelliJ
 
-1. Select all the lines inside the body of the loop. Don't include the for/while
-line or the closing brace `}` of the loop.
+1. Select all the lines **inside the body of the loop**. Don't include the `{` or `}`.
 
 2. Now select menu item `Refactor —> Extract/Introduce —> Method…`
 
@@ -192,29 +192,30 @@ line or the closing brace `}` of the loop.
 
 That's your first big IntelliJ trick! There are lots more.
 
-Note: Recall that in Python we were in the habit of defining helpers with a leading underscore to mark them as being
-private — only to be called by the method using it as a helper and not by anyone outside the class. IntelliJ has done
-something similar here — when it extracted this method, it used the `private` access modifier for the extracted method.
-You'll learn more about the various access modifiers in your Java readings soon.
+> Note: Recall that in Python we were in the habit of defining helpers with a leading underscore to mark them as being
+> private — only to be called by the method using it as a helper and not by anyone outside the class. IntelliJ has done
+> something similar here — when it extracted this method, it used the `private` access modifier for the extracted method.
+> You'll learn more about the various access modifiers in your Java readings soon.
 
 ### Task 2.1: Publishing your changes
 
 Now that you've made your first edits to your code, you should ask git to save these changes for you.
 
-- [ ] Open the Terminal tab in IntelliJ and type `git status`, it will show you that you have modified `lab1.FizzBuzz.java` (and this README too!).
+- [ ] Open the Terminal tab in IntelliJ and type `git status`, it will show you that you have
+  modified `FizzBuzz.java` (and possibly this README too!).
 
-We will save our local changes to `lab1.FizzBuzz.java` and then push the changes to your GitHub repository using
+We will save our local changes to `FizzBuzz.java` and then push the changes to your GitHub repository using
 a sequence of three git commands:
 
-1. `git add src/lab1.FizzBuzz.java`
-   - this tells git to "stage" our changes to lab1.FizzBuzz.java. If you run `git status` again, you will see
-   that `lab1.FizzBuzz.java` has a new status.
+1. `git add src/FizzBuzz.java`
+   - this tells git to "stage" our changes to `FizzBuzz.java`. If you run `git status` again, you will see
+   that `FizzBuzz.java` has a new status.
 2. `git commit -m "refactored to extract helper method"`
    - this actually records your changes to all "staged" files to your local git repository. You can again
    run `git status` to see what has happened.
-   - And if you run `git log`, you will see a record of all commits made so far in the repository.
+   - And if you run `git log`, you will see a record of _all_ commits made so far in the repository.
    - The `-m "refactored to extract helper method"` is the message briefly documenting what changes were made.
-   You can put whatever message you want in the quotes, but try to keep it short and descriptive.
+     You can put whatever message you want in the quotes, but try to keep it short and descriptive.
 3. `git push`
    - this last step is what actually sends your committed changes to your remote GitHub repository.
    - IMPORTANT: You likely won't have your system configured for this command to actually work directly, so you
@@ -240,8 +241,8 @@ have trouble with this, please ask and someone around can help you through the s
 >Tip: It is good practice to get in the habit of making commits that are small and have a distinct purpose.
 For example, one might imagine making a commit each time they complete a task they are working on or finish
 making edits to a specific file. Keeping your commits small will allow your commit messages to remain short and descriptive.
-You can make a sequence of adds and commits without pushing. Whenever you decide to push, you can push all of
-the commits at once. As you work through the lab today, we encourage you to practice commiting your changes regularly
+You can make a sequence of adds and commits without pushing. Whenever you decide to push, you can push all your
+commits at once. As you work through the lab today, we encourage you to practice commiting your changes regularly
 (the exact frequency is up to you, but the instructions will remind you periodically!).
 
 Now, back to exploring the code!
@@ -250,22 +251,22 @@ Now, back to exploring the code!
 
 To briefly observe what private does, let's create a new class.
 
-- [ ] Right-click on `src` and select `New —> Java Class`. Name it `Main`. This will create a `Main.java` file.
+- [ ] Right-click on `lab1` and select `New —> Java Class`. Name it `Main`. This will create a `Main.java` file.
 
-We'll write a main method which will attempt to call `lab1.FizzBuzz.doFizzBuzz` (or whatever you called
+We'll write a main method which will attempt to call `FizzBuzz.doFizzBuzz` (or whatever you called
 your extracted helper method).
 
 - [ ] To quickly generate `main`, you can start typing `psvm` in IntelliJ and then press Enter to accept the
 autocomplete — it will generate an empty "public static void main" (psvm) method for you. Neat!
 
-- [ ] In the body of this main method, type `lab1.FizzBuzz.`. You'll see that the private helper method does not
-appear in the autocomplete, but `lab1.FizzBuzz.main` does! If you wanted to be able to call the helper from
+- [ ] In the body of this main method, type `FizzBuzz.`. You'll see that the private helper method does _not_
+appear in the autocomplete, but `FizzBuzz.main` does! If you wanted to be able to call the helper from
 inside `Main.java`, you would need to change the access modifier on the helper.
 It turns out that IntelliJ can help us out with this too!
 
 ### Task 3.1: Changing access modifiers using IntelliJ
 
-- [ ] In your main method in `Main.java`, try making a call to your private helper — something like `lab1.FizzBuzz.doFizzBuzz(5);`.
+- [ ] In your main method in `Main.java`, try making a call to your private helper — something like `FizzBuzz.doFizzBuzz(5);`.
 
 You'll see that IntelliJ flags that you are trying to access something that is private. Unlike Python,
 Java won't even let you run the code when it detects this kind of violation of an access modifier (it is an
@@ -279,19 +280,19 @@ These will be explained in more detail in your readings, but for now we can just
 - [ ] Choose this fix and the error will go away. Try running `Main.java` to see if it outputs
 what you expect.
 
-### Task 3.2: Calling `lab1.FizzBuzz.main` from `Main.main`
+### Task 3.2: Calling `FizzBuzz.main` from `Main.main`
 
-Suppose we wanted to execute a line like `lab1.FizzBuzz.main();` in `Main.main`. Why doesn't this work?
+Suppose we wanted to execute a line like `FizzBuzz.main();` in `Main.main`. Why doesn't this work?
 
 If you add this line to `Main.main`, IntelliJ will tell you the problem and suggest some fixes,
 but neither of them will *directly* fix the problem.
 
 * Talk with your team to try to find the best way to resolve the problem so that you can run `Main.java` and
-see the expected output of executing `lab1.FizzBuzz.main`. If you come up with different ways to do this,
+see the expected output of executing `FizzBuzz.main`. If you come up with different ways to do this,
 think about how they differ and which might be best.
 
 And that's all we wanted to highlight with this first example. You'll see and learn much more Java syntax as you work
-through the readings and coding exercises over the next few weeks.
+through readings and coding exercises over the next few weeks.
 
 ### Task 3.3 Push your latest changes
 
@@ -318,8 +319,7 @@ on GitHub.
 right side of the screen, you should see an edit button (with a pencil on it). Click that and make a small edit to
 the file. Then click the commit button to commit the change to the repository.
 
-This change has now been made on GitHub,
-but your local copy doesn't know about the change yet.
+This change has now been made on GitHub, but your local copy doesn't know about the change yet.
 
 - [ ] In IntelliJ, you can either click the `Git` menu and choose `Pull...`,
 or you can run `git pull` from the Terminal tab. Once you have done the pull, you should see the commit show up in
@@ -330,131 +330,43 @@ Let's move on to a couple more small programming challenges for you to try out, 
 # Technical interviews  (and Java practice)
 
 Technical interviews for developer internships often have you write
-some code. They usually test first- and second-year material, and many students
+some code. They usually test first-year and second-year material, and many students
 practice these kinds of problems regularly over the academic year to gain confidence in tackling them.
 
 As part of this week's lab, you'll solve two of them, and submit your code
-on MarkUs using git.
+on MarkUs to get practice with running the self tests on MarkUs.
 
-## Task 4: lab1.Multiples of 3 and 5
+## Task 4: Multiples of 3 and 5
 
-- [ ] Right-click on `src` and select `New —> Java Class`. Name it `lab1.Multiples`.
+- [ ] Right-click on `lab1` and select `New —> Java Class`. Name it `Multiples`.
 
 We're looking for integers greater than 0 that are multiples of 3 or 5. The first four are 3, 5, 6, and 9, so there are
 four below 10. How many are below 1000?
 
-- [ ] In `lab1.Multiples.java`, write a main method that **prints** how many multiples of 3 or 5 there are below 1000.
+- [ ] In `Multiples.java`, write a main method that **prints** how many multiples of 3 or 5 there are below 1000.
 Add this file to your project, commit, and push. Check your repo on GitHub to confirm your changes were pushed successfully.
 
 > Tip: Just like with `psvm`, you can start typing `sout`
 > and then press Enter to generate `System.out.println();` in IntelliJ.
 
-If you don't get the right answer immediately, that's okay! Make sure everyone
-on your team is able to arrive at the correct code for this.
+If you don't get the right answer immediately, that's okay! Discuss with your team to ensure everyone
+is happy with their own code for this.
 
-## Task 5: Reduce a number to 0
+### Task 4.1: Testing Multiples
 
-- [ ] Right-click on `src` and select `New —> Java Class`. Name it `Reduce`.
+Now, let's modify your code so that it is easy to test.
 
-Starting with a number n, if n is even divide it by 2. If n is odd, subtract 1. Repeat.
-
-For example, if you start with n = 2, the answer is 2.
-Details: 2 (even, divide by 2) --> 1 (odd, subtract 1) --> 0.
-
-- [ ] In `Reduce.java`, write a main method that prints how many steps it takes to reach 0 if you start at 100.
-Add this file to your project, commit, and push. If you don't get the right answer, that's okay for now.
-
-If you don't get the right answer immediately, that's okay! Make sure everyone
-on your team is able to arrive at the correct code for this.
-
----
-
-## Task 6: Submit on MarkUs to Test
-
-
----
-
-And that's it for the first lab activity of the term!
-
-- [ ] Check with your team to see how many commits you each made during the lab in your lab1.FizzBuzz repo.
-  You can view the log of commits on GitHub or use the `git log` command to view a summary of the commits to the repository.
-
-## Further practice
-
-[LeetCode](https://leetcode.com) is a very popular source of practice problems.
-[CoderByte](https://www.coderbyte.com/) is another. 
-If you are looking to apply for a software developer internship, we recommend that you practice these kinds of
-problems over the year. These platforms also support various programming languages, so solving these
-problems is a great way to practice Java or any other new language you later want to learn.
-This term, you might find it interesting to try solving some problems first in Python and then in Java.
-
-## Bonus: Collaboration with git (only if you have time)
-
-If your team has time left in the lab, you might try experimenting with how git works when you have
-a shared repository with multiple people contributing code. We'll be doing some similar exercises in
-the next labs, as this will be important when you work on your projects, so this is optional for now.
-
-Note: you can also work through this on your own by creating multiple clones of your
-own repository.
-
-We'll briefly summarize two approaches you might take for this:
-
-### Forking and requesting to make a contribution
-
-1. Share your lab1.FizzBuzz GitHub repository URL with another student in the class.
-
-2. Have them make a fork of your repository; just as you did at the start of this activity.
-
-3. Have you each make a change to your GitHub repositories (as you did in Task 3.4 before).
-
-4. Anyone with a fork of your repository will see an option to sync with your repository.
-Similarly, they will also see an option to contribute their changes to your original fork.
-The mechanism by which this contribution is done is a **pull request**. As the name suggests,
-you are requesting that, roughly speaking, the original repository do a `git pull` to pull in your commits. We'll talk
-more about pull requests later, but feel free to try it out now by following the instructions that
-appear when you click the button to contribute.
-
-### Giving someone else direct access to your GitHub repository
-
-1. Click on the Settings tab for your repository on GitHub (the right-most tab). In it, there is a Collaborators tab (top-left).
-Click on it and then you will see a button to add people to your project.
-
-2. Add the other person to your project. They can now clone your repository directly using
-the HTTPS URL as you did during the lab.
-
-3. Now, if one of you makes a local change and then pushes it,
-the other one of you will need to do a `git pull` to get the changes. Of course, if you both make changes
-and try to push, there may be conflicting changes which need to be resolved. As mentioned earlier,
-git does a pretty good job telling you what is wrong and can help you resolve any conflicts. We'll talk more about
-this later, as well as other features of git which can help you avoid conflicts.
-
-
-
-
-
-
-# Coding Homework for Week 1
-
-## Your Tasks
-
-You will now be tasked with ensuring the two methods you wrote are
-fully correct, and you will get some extra practice working with git.
-
-> Tip: If you had trouble implementing these methods in Java, you might start
-> by first implementing them in Python (or sketching the logic on paper),
-> then translating your code into Java line-by-line. As you become more comfortable
-> with the syntax of Java, it will get easier to directly write your code.
-
-## Task 1: `lab1.Multiples.java`
-
-- [ ] Extract a method from `lab1.Multiples.main` that will return
-  the answer. The answer should still be printed in your main method.
-  After you do this, your main method should look something like:
+- [ ] Extract a method from `Multiples.main` that will return
+  the answer, call it `multiples`. The answer should still be printed in your `Multiples.main` method.
+  After you do this, your `Multiples.main` method should look something like:
 
 ```java
 int count = multiples();
 System.out.println(count);
 ```
+
+> In order to later test the `multiples` method, we will need to change the access modifier on your
+> extracted method. To do this, you can remove the `private` keyword.
 
 - [ ] Right-click the first line and choose `Refactor->Inline Variable` to
   further simplify the method body to just one line of code.
@@ -499,17 +411,17 @@ Given that URL, we can then clone your repo and get our own copy of
 your code to run the tests on.
 
 - [ ] Submit your code to MarkUs
-- copy the URL from GitHub that you used to clone **your fork of the FizzBuzz repo**.
-- log into MarkUs and go to the `week1git` assignment.
-- submit the URL by pasting the URL into the submission box; do not change anything.
-- once you submit you can then run the self tests to confirm everything is working.
+  - copy the URL from GitHub that you used to clone **your fork of the FizzBuzz repo**.
+  - log into MarkUs and go to the `week1git` assignment.
+  - submit the URL by pasting the URL into the submission box; do not change anything.
+  - once you submit you can then run the self tests to confirm everything is working.
 
 > Make sure your GitHub repo is public and not private if you encounter permission errors when
 > running the self tests. Carefully read any error messages you see on MarkUs to understand
 > what the issue is.
 
 
-### Task 2: Overloading `multiples`
+### Task 4.2: Overloading `multiples`
 
 Unlike Python, Java allows us to define multiple methods with the same name,
 but with different numbers and types of parameters. This is called **overloading** and is discussed in the readings.
@@ -523,7 +435,7 @@ problem (1000, 3, and 5).
 > public method's body just calls a private helper to do the work for it.
 
 1. Add this overloaded version of your multiples method which was described above. That is,
-   write a method called `multiples` that takes no arguments and just calls your `multiples` from Task 1
+   write a method called `multiples` that takes no arguments and just calls your `multiples` from before
    to solve the original multiples problem for n=1000, a=3 and b=5.
 
 Thinking back to Python, this would allow us to accomplish the same thing that Python's syntax for default
@@ -534,30 +446,103 @@ def multiples(n: int = 1000, a: int = 3, b: int = 5) -> int:
     # logic of the Multiples problem
 ```
 
-As you learn more languages, it can be interesting to observe how they often provide similar
-functionality with different syntax.
+> As you learn more programming languages, it can be interesting to observe how they often
+> provide similar functionality with different syntax.
 
-## Task 3: `Reduce.java`
+Once you complete these steps, you can copy the `MultiplesDefaultTest.java` file into the `test/lab1` directory
+and run the tests in it to check your work.
 
-Repeat the above steps from Task 1 (not Task 2!), but for `Reduce.java`.
-In step 5, the method should only take one integer, `n`,
-as a parameter, with the generalization being to use `n` where 100 was previously used.
+- [ ] Use git to push your updated `Multiples.java` file to GitHub and run the self tests again on MarkUs.
+
+
+And that's it for the first lab activity of the term!
+
+# Bonus activities
+There are some additional exercises below for your team to work through if you have time,
+but the above was the core activity for this week.
+
+## Checking your logs
+
+- [ ] Check with your team to see how many commits you each made during the lab in your FizzBuzz repo.
+  You can view the log of commits on GitHub or use the `git log` command to view a summary of the commits to the repository.
+
+## Bonus: Collaboration with git (only if you have time)
+
+If your team has time left in the lab, you might try experimenting with how git works when you have
+a shared repository with multiple people contributing code. We'll be doing some similar exercises in
+the next labs, as this will be important when you work on your projects, so this is optional for now.
+
+>Note: you can also work through this on your own by creating multiple clones of your own repository.
+
+We'll briefly summarize two approaches you might take for this:
+
+### Forking and requesting to make a contribution
+
+1. Share your FizzBuzz GitHub repository URL with another student in the class.
+
+2. Have them make a fork of your repository; just as you did at the start of this activity.
+
+3. Have you each make a change to the contents of your GitHub repositories.
+
+4. Anyone with a fork of your repository will see an option to sync with your repository.
+Similarly, they will also see an option to contribute their changes to your original fork.
+The mechanism by which this contribution is done is a **pull request**. As the name suggests,
+you are requesting that, roughly speaking, the original repository do a `git pull` to pull in your commits. We'll talk
+more about pull requests later, but feel free to try it out now by following the instructions that
+appear when you click the button to contribute.
+
+### Giving someone else direct access to your GitHub repository
+
+1. Click on the Settings tab for your repository on GitHub (the right-most tab).
+  In it, there is a Collaborators tab (top-left). Click on it and then you will see a button
+  to add people to your project.
+
+2. Add the other person to your project. They can now clone your repository directly using
+the HTTPS URL as you did during the lab and also push changes.
+
+3. Now, if one of you makes a local change and then pushes it,
+the other one of you will need to do a `git pull` to get the changes. Of course, if you both make changes
+and try to push, there may be conflicting changes which need to be resolved. As mentioned earlier,
+git does a pretty good job telling you what is wrong and can help you resolve any conflicts. We'll talk more about
+this later, as well as other features of git which can help you avoid conflicts.
+
+## Bonus: Reduce a number to 0
+
+Here is one more small coding problem similar to the Multiples problem for extra practice.
+
+- [ ] Right-click on `src` and select `New —> Java Class`. Name it `Reduce`.
+
+Starting with a number n, if n is even divide it by 2. If n is odd, subtract 1. Repeat.
+
+For example, if you start with n = 2, the answer is 2.
+Details: 2 (even, divide by 2) --> 1 (odd, subtract 1) --> 0.
+
+- [ ] In `Reduce.java`, write a main method that prints how many steps it takes to reach 0 if you start at 100.
+  Add this file to your project, commit, and push.
+
+Similar to what you did for `Multiples.java`, modify the code so that you can easily test it by extracting
+a helper method called `reduce`. Then generalize that helper to take in `n` as a parameter.
 
 Once you complete these steps, you can copy the `ReduceTest.java` file into the `test/lab1` directory
 and run the tests.
 
-Once these pass, `add`, `commit`, and `push`
-your `Reduce.java`. Since MarkUs already has your GitHub URL, you don't need to "resubmit" that;
-you can just rerun the self tests on MarkUs and it will use your most recent code from GitHub.
+Finally, `add`, `commit`, and `push` your `Reduce.java`. Since MarkUs already has your GitHub URL,
+you don't need to "resubmit" that; you can just rerun the self tests on MarkUs and it will use your
+most recent code from GitHub.
 
+## Further practice
 
-And that's all for `week1git`! Next week you'll further explore writing more interesting classes in Java
-rather than these static methods, which hopefully felt quite similar to the kind of standalone functions
-you used to write when first learning to write Python code.
+[LeetCode](https://leetcode.com) is a very popular source of practice problems.
+[CoderByte](https://www.coderbyte.com/) is another.
+If you are looking to apply for a software developer internship, we recommend that you practice these kinds of
+problems over the year. These platforms also support various programming languages, so solving these
+problems is a great way to practice Java or any other new language you later want to learn.
+This term, you might find it interesting to try solving some problems first in Python and then in Java.
+
 
 ## Extra to think about
 
-What is the runtime of your solution for the lab1.Multiples problem, in terms of `n`?
+What is the runtime of your solution for the Multiples problem, in terms of `n`?
 We aren't testing your code for efficiency in this assignment, but if your solution is linear in `n`, then
 we encourage you to think about how it could be made more efficient. This is good practice for
 these kinds of technical interview questions!
