@@ -42,6 +42,13 @@ editor+preview, or just the preview of this markdown file.
 Before we begin, note that IntelliJ is made by the same company as PyCharm, so it should feel quite familiar to you,
 with the only difference being that we'll be working with Java code instead of Python code of course!
 
+### Important Configuration Step
+
+> IntelliJ might mark the `test_files` directory to be a "sources root" by default since it contains `.java` files.
+> If that directory is blue, you will need to unmark it by right-clicking the directory,
+> scrolling down to the bottom of that menu, and selecting `Mark Directory as -> Unmark as Sources Root`.
+
+
 ### Aside: getting to know Markdown
 The Markdown format is commonly used for things like readme files, as it allows for simple syntax to be incorporated,
 which enables basic typesetting when viewed while still being a plaintext format for the purposes of
@@ -126,7 +133,7 @@ class FizzBuzz {
 }
 ```
 
-- [ ] Open `FizzBuzz.java` in the `src` directory and click the run button in the top left corner.
+- [ ] Open `FizzBuzz.java` in the `src/lab1` directory and click the run button in the top left corner.
 
 If you don't see this button, you may need to mark `src` as the `Sources Root` for the project. You can do this
 by right-clicking the `src` directory in the `Project` tab and near the bottom of the context menu
@@ -154,7 +161,7 @@ strike you as either similar to or different from Python.
 > using the debugger in the same way. You might find it informative to try stepping through the
 > code to see what it is doing on a few iterations.
 
-## The Main Function
+## The Main Method
 
 In Python, any code that you write in a file will get run when you execute the file.
 This is not the case in Java. You must define a method called `main` in a class
@@ -207,7 +214,7 @@ Now that you've made your first edits to your code, you should ask git to save t
 We will save our local changes to `FizzBuzz.java` and then push the changes to your GitHub repository using
 a sequence of three git commands:
 
-1. `git add src/FizzBuzz.java`
+1. `git add src/lab1/FizzBuzz.java`
    - this tells git to "stage" our changes to `FizzBuzz.java`. If you run `git status` again, you will see
    that `FizzBuzz.java` has a new status.
 2. `git commit -m "refactored to extract helper method"`
@@ -510,7 +517,7 @@ this later, as well as other features of git which can help you avoid conflicts.
 
 Here is one more small coding problem similar to the Multiples problem for extra practice.
 
-- [ ] Right-click on `src` and select `New —> Java Class`. Name it `Reduce`.
+- [ ] Right-click on `lab1` and select `New —> Java Class`. Name it `Reduce`.
 
 Starting with a number n, if n is even divide it by 2. If n is odd, subtract 1. Repeat.
 
