@@ -1,5 +1,7 @@
+package lab1;
+
 /**
- * Solve the FizzBuzz challenge.
+ * Solve the lab1.FizzBuzz challenge.
  */
 class FizzBuzz {
 
