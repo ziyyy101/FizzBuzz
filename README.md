@@ -457,10 +457,12 @@ def multiples(n: int = 1000, a: int = 3, b: int = 5) -> int:
 > provide similar functionality with different syntax.
 
 Once you complete these steps, you can copy the `MultiplesDefaultTest.java` file into the `test/lab1` directory
-and run the tests in it to check your work.
+and run the tests in it to check your work — debugging as needed.
 
 - [ ] Use git to push your updated `Multiples.java` file to GitHub and run the self tests again on MarkUs.
 
+> Since MarkUs already has your GitHub URL, you don't need to "resubmit" that; you can just rerun the self
+> tests on MarkUs, and it will clone a copy of your most recent code from GitHub. Neat!
 
 And that's it for the first lab activity of the term!
 
@@ -522,20 +524,19 @@ Here is one more small coding problem similar to the Multiples problem for extra
 Starting with a number n, if n is even divide it by 2. If n is odd, subtract 1. Repeat.
 
 For example, if you start with n = 2, the answer is 2.
-Details: 2 (even, divide by 2) --> 1 (odd, subtract 1) --> 0.
+
+> Details: 2 (even, divide by 2) --> 1 (odd, subtract 1) --> 0.
 
 - [ ] In `Reduce.java`, write a main method that prints how many steps it takes to reach 0 if you start at 100.
   Add this file to your project, commit, and push.
 
-Similar to what you did for `Multiples.java`, modify the code so that you can easily test it by extracting
+- [ ] Similar to what you did for `Multiples.java`, modify the code so that you can easily test it by extracting
 a helper method called `reduce`. Then generalize that helper to take in `n` as a parameter.
 
 Once you complete these steps, you can copy the `ReduceTest.java` file into the `test/lab1` directory
-and run the tests.
+and run the tests — debugging as needed.
 
-Finally, `add`, `commit`, and `push` your `Reduce.java`. Since MarkUs already has your GitHub URL,
-you don't need to "resubmit" that; you can just rerun the self tests on MarkUs and it will use your
-most recent code from GitHub.
+- [ ] Finally, `add`, `commit`, and `push` your `Reduce.java` — then rerun the self tests on MarkUs.
 
 ## Further practice
 
